@@ -1,5 +1,13 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Landing from "./components/home/Landing";
+import Project from "./components/project/Project";
 import "./App.css";
 
 export default function App() {
-  return <></>;
+  const router = createBrowserRouter([
+    { path: "/", element: <Landing />, errorElement: "" },
+    { path: "/project/:id", element: <Project />, errorElement: "" },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
