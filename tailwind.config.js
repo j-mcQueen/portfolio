@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        interB: ["Inter Bold", "sans-serif"],
+        interL: ["Inter Light", "sans-serif"],
+      },
       colors: {
         forest: "#001502",
         emerald: "#094E0F",

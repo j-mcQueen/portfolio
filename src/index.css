@@ -2,25 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  min-width: 300px;
-  overflow-x: hidden;
-}
-
 @font-face {
   font-family: "Inter";
-  src: local("Inter"), url("/fonts/inter/Inter-Regular.woff2") format("woff2");
+  src: local("Inter"),
+    url("assets/fonts/inter/Inter-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Inter Bold";
-  src: local("Inter Bold"), url("/fonts/inter/Inter-Bold.woff2") format("woff2");
+  src: local("Inter Bold"),
+    url("assets/fonts/inter/Inter-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Inter Light";
   src: local("Inter Light"),
-    url("/fonts/inter/Inter-Light.woff2") format("woff2");
+    url("assets/fonts/inter/Inter-Light.woff2") format("woff2");
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  min-width: 300px;
+  overflow-x: hidden;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
