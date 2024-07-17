@@ -5,8 +5,7 @@ export default function GitHub({ ...props }) {
     <svg
       role="img"
       viewBox="0 0 24 24"
-      fill="currentColor"
-      color="#FFF"
+      fill="#FFF"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >

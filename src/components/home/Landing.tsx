@@ -2,7 +2,7 @@ import Hero from "./Hero";
 
 export default function Landing() {
   return (
-    <main>
+    <main className="py-5">
       <section>
         <Hero />
       </section>
