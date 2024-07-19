@@ -1,3 +1,4 @@
+import Experience from "./experience/Experience";
 import Hero from "./Hero";
 import Projects from "./projects/Projects";
 
@@ -14,6 +15,10 @@ export default function Landing() {
         <div className="flex justify-center">
           <span className="block h-[2px] w-[350px] bg-white"></span>
         </div>
+      </section>
+
+      <section className="text-center">
+        <Experience />
       </section>
     </main>
   );
