@@ -2,25 +2,25 @@ export const data = [
   {
     title: "GOOD LUCK WHITE RABBIT",
     blurb:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "A private content delivery and portfolio application for a multidisciplinary creative.",
     tech: ["JS", "TS", "TW", "RE", "MDB"],
   },
   {
     title: "RECIPERACK",
     blurb:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "A hub to store, share and edit your favourite online recipes, and add them to your personal weekly menu.",
     tech: ["JS", "TS", "TW", "RE", "MDB"],
   },
   {
     title: "FINDAFILM",
     blurb:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "An application for getting AI-generated movie suggestions based on user input.",
     tech: ["JS", "TS", "TW", "RE", "PY"],
   },
   {
     title: "MR. BAGUETTE",
     blurb:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "The business website for the esteemed wholesale fancy-shaped diamond supplier.",
     tech: ["JS", "TS", "TW", "RE"],
   },
 ];
