@@ -3,10 +3,14 @@ export default function MDB({ ...props }) {
 
   return (
     <svg
+      role="img"
+      aria-labelledby="MDBTitle MDBDesc"
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
     >
+      <title id="MDBTitle">The MongoDB logo</title>
+      <desc id="MDBDesc">The MongoDB logo</desc>
       <defs>
         <linearGradient
           id="mongo_svg__a_474"

@@ -9,6 +9,7 @@ export default function Outward({ ...props }) {
       fill="#FFF"
       className={className}
     >
+      <title>Go to project</title>
       <path d="m243-240-51-51 405-405H240v-72h480v480h-72v-357L243-240Z" />
     </svg>
   );

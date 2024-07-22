@@ -3,10 +3,14 @@ export default function PY({ ...props }) {
 
   return (
     <svg
+      role="img"
+      aria-labelledby="pythonTitle pythonDesc"
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
     >
+      <title id="pythonTitle">The Python logo</title>
+      <desc id="pythonDesc">The Python logo</desc>
       <defs>
         <linearGradient
           id="python_svg__a_567"
