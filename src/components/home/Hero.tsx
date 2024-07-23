@@ -5,13 +5,13 @@ import LinkedIn from "../../assets/media/icons/LinkedIn";
 export default function Hero() {
   return (
     <>
-      <header>
-        <hgroup className="text-center">
+      <header className="flex flex-col items-center">
+        <hgroup className="max-w-[500px] text-center">
           <h1 className="font-interB text-2xl xl:text-3xl">
             JACK DONALD MCQUEEN
           </h1>
 
-          <p className="font-interL text-gray py-7 xl:py-10 px-3">
+          <p className="font-interL text-gray text-center xl:text-left leading-snug py-7 xl:py-10 px-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
