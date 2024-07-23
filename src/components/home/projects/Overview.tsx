@@ -8,7 +8,7 @@ import MDB from "../../../assets/media/icons/tech/MDB";
 import PY from "../../../assets/media/icons/tech/PY";
 
 export default function Overview({ ...props }) {
-  const { title, blurb, tech } = props;
+  const { title, blurb, tech, setActiveProject } = props;
   const navigate = useNavigate();
 
   const toolsClass = "w-5 h-5 xl:w-7 xl:h-7";
@@ -24,7 +24,10 @@ export default function Overview({ ...props }) {
   const handleOpen = (title: string) => {
     let sanitized = title;
     if (title.includes(" ")) sanitized = title.replace(/\W/g, ""); // strip title of everything except letters and numbers
-    return navigate(`/projects/${sanitized.toLowerCase()}`);
+    const sanitizedL = sanitized.toLowerCase();
+
+    setActiveProject(sanitizedL);
+    return navigate(`/projects/${sanitizedL}`);
   };
 
   return (

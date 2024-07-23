@@ -2,7 +2,9 @@ import Experience from "./experience/Experience";
 import Hero from "./Hero";
 import Projects from "./projects/Projects";
 
-export default function Landing() {
+export default function Landing({ ...props }) {
+  const { setActiveProject } = props;
+
   return (
     <main className="py-5">
       <section>
@@ -10,10 +12,10 @@ export default function Landing() {
       </section>
 
       <section className="text-center pt-14 pb-10">
-        <Projects />
+        <Projects setActiveProject={setActiveProject} />
 
         <div className="flex justify-center">
-          <span className="block h-[2px] w-[350px] bg-white"></span>
+          <span className="block h-[1px] w-[350px] bg-white"></span>
         </div>
       </section>
 
