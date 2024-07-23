@@ -12,21 +12,22 @@ import Star from "../../../assets/media/icons/experience/Star";
 import Organise from "../../../assets/media/icons/experience/Organise";
 
 export default function Experience() {
+  const expClass = "xl:w-10 xl:h-10 w-16 h-16";
   const icons = [
     [
-      <Code className="xl:w-10 xl:h-10 w-16 h-16" />,
-      <Design className="xl:w-10 xl:h-10 w-16 h-16" />,
-      <Partner className="xl:w-10 xl:h-10 w-16 h-16" />,
+      <Code className={expClass} />,
+      <Design className={expClass} />,
+      <Partner className={expClass} />,
     ],
     [
-      <Organise className="xl:w-10 xl:h-10 w-16 h-16" />,
-      <Bank className="xl:w-10 xl:h-10 w-16 h-16" />,
-      <Money className="xl:w-10 xl:h-10 w-16 h-16" />,
+      <Organise className={expClass} />,
+      <Bank className={expClass} />,
+      <Money className={expClass} />,
     ],
     [
-      <Globe className="xl:w-10 xl:h-10 w-16 h-16" />,
-      <Clothes className="xl:w-10 xl:h-10 w-16 h-16" />,
-      <Star className="xl:w-10 xl:h-10 w-16 h-16" />,
+      <Globe className={expClass} />,
+      <Clothes className={expClass} />,
+      <Star className={expClass} />,
     ],
   ];
 

@@ -11,6 +11,16 @@ export default function Overview({ ...props }) {
   const { title, blurb, tech } = props;
   const navigate = useNavigate();
 
+  const toolsClass = "w-5 h-5 xl:w-7 xl:h-7";
+  const tools = {
+    JS: <JS className={toolsClass} />,
+    TS: <TS className={toolsClass} />,
+    TW: <TW className={toolsClass} />,
+    RE: <RE className={toolsClass} />,
+    MDB: <MDB className={toolsClass} />,
+    PY: <PY className={toolsClass} />,
+  };
+
   const handleOpen = (title: string) => {
     let sanitized = title;
     if (title.includes(" ")) sanitized = title.replace(/\W/g, ""); // strip title of everything except letters and numbers
@@ -28,19 +38,14 @@ export default function Overview({ ...props }) {
         <Outward className="w-5 h-5" />
       </div>
 
-      <p className="font-interL text-gray text-left py-3 xl:py-2 leading-snug ">
+      <p className="font-interL text-gray text-left text-sm py-3 xl:py-2 leading-snug ">
         {blurb}
       </p>
 
       <div className="flex justify-evenly">
-        {tech.includes("JS") ? <JS className="w-5 h-5 xl:w-7 xl:h-7" /> : null}
-        {tech.includes("TS") ? <TS className="w-5 h-5 xl:w-7 xl:h-7" /> : null}
-        {tech.includes("TW") ? <TW className="w-5 h-5 xl:w-7 xl:h-7" /> : null}
-        {tech.includes("RE") ? <RE className="w-5 h-5 xl:w-7 xl:h-7" /> : null}
-        {tech.includes("MDB") ? (
-          <MDB className="w-5 h-5 xl:w-7 xl:h-7" />
-        ) : null}
-        {tech.includes("PY") ? <PY className="w-5 h-5 xl:w-7 xl:h-7" /> : null}
+        {tech.map((tool: string) => {
+          return tools[tool as keyof typeof tools];
+        })}
       </div>
     </button>
   );
