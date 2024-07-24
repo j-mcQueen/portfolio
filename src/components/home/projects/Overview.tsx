@@ -1,4 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import { Fragment } from "react/jsx-runtime";
+import { v4 as uuidv4 } from "uuid";
+
 import Outward from "../../../assets/media/icons/Outward";
 import JS from "../../../assets/media/icons/tech/JS";
 import TS from "../../../assets/media/icons/tech/TS";
@@ -47,7 +50,11 @@ export default function Overview({ ...props }) {
 
       <div className="flex justify-evenly">
         {tech.map((tool: string) => {
-          return tools[tool as keyof typeof tools];
+          return (
+            <Fragment key={uuidv4()}>
+              {tools[tool as keyof typeof tools]}
+            </Fragment>
+          );
         })}
       </div>
     </button>

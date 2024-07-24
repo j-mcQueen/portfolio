@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+
 import Return from "../../assets/media/icons/Return";
 
 export default function Sidebar({ ...props }) {
@@ -26,7 +28,7 @@ export default function Sidebar({ ...props }) {
 
         {data.features.map((feature: { title: string }) => {
           return (
-            <li>
+            <li key={uuidv4()}>
               <button
                 type="button"
                 onClick={() => setTargetLink(feature.title)}
