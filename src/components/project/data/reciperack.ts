@@ -2,10 +2,11 @@ export const reciperack = {
   title: "RECIPERACK",
   summary: "",
   motivations: ["", ""],
-  featureDiscussion: [
-    ["", "", "", ""],
-    ["", "", "", ""],
+  features: [
+    { title: "ONLINE RECIPE CENTRALIZATION", paras: ["", "", "", ""] },
+    { title: "WEEKLY MEAL PLANS", paras: ["", "", "", ""] },
   ],
-  live: true,
+  local: false, // project is deployed, not run locally
+  link: "https://reciperack.vercel.app/",
   repo: "https://github.com/j-mcQueen/reciperack",
 };
