@@ -1,17 +1,19 @@
+import { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
 export default function Article({ ...props }) {
   const { data } = props;
+  const [targetLink, setTargetLink] = useState("");
 
   return (
     <main className="p-5 grid grid-cols-2">
-      <section>
-        <Sidebar />
+      <section className="sticky">
+        <Sidebar data={data} setTargetLink={setTargetLink} />
       </section>
 
       <section>
-        <Header title={data.title} repo={data.repo} live={data.live} />
+        <Header data={data} />
       </section>
     </main>
   );
