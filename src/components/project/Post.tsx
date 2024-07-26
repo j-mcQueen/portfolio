@@ -24,11 +24,11 @@ export default function Post({ ...props }) {
           motivationsRef.current.scrollIntoView(scrollOpts);
         break;
 
-      case targetLink === data.features[0].title:
+      case data.features[0].title:
         if (featureARef.current) featureARef.current.scrollIntoView(scrollOpts);
         break;
 
-      case targetLink === data.features[1].title:
+      case data.features[1].title:
         if (featureBRef.current) featureBRef.current.scrollIntoView(scrollOpts);
         break;
 
@@ -45,7 +45,10 @@ export default function Post({ ...props }) {
         <span className="block w-1/2 h-[1px] bg-white mt-10"></span>
       </div>
 
-      <hgroup ref={motivationsRef} className="text-gray">
+      <hgroup
+        ref={motivationsRef}
+        className="text-gray pb-10 flex flex-col items-center"
+      >
         <h2 className="flex justify-center items-center font-interB text-white xl:text-xl gap-3 pb-10">
           <Bulb className="xl:w-7 xl:h-7 w-5 h-5" /> MOTIVATIONS
         </h2>
@@ -60,23 +63,46 @@ export default function Post({ ...props }) {
             </p>
           );
         })}
+
+        <span className="block w-1/2 h-[1px] bg-white mt-10"></span>
       </hgroup>
 
       {data.features.map(
         (feature: { title: string; paras: string[] }, index: number) => {
           // TODO if there are more than 2 features, it may be more appropriate to move the logic to determine which ref to supply to its own function that uses switch/case
           return (
-            <div ref={index === 0 ? featureARef : featureBRef} key={uuidv4()}>
-              {feature.paras.map((para: string) => {
+            <div
+              ref={index === 0 ? featureARef : featureBRef}
+              key={uuidv4()}
+              className="pb-10 flex flex-col items-center"
+            >
+              <div className="flex justify-center items-center">
+                <h2 className="font-interB text-white xl:text-xl pb-10">
+                  {feature.title}
+                </h2>
+              </div>
+
+              {feature.paras.map((para: string, j: number) => {
+                console.log(j);
                 return (
                   <Fragment key={uuidv4()}>
-                    <p>{para}</p>
+                    <p
+                      className={
+                        j !== 0 && j !== feature.paras.length - 1
+                          ? "py-5"
+                          : undefined
+                      }
+                    >
+                      {para}
+                    </p>
 
                     {/* {j === 1 ? <></> : null} */}
                     {/* TODO choose appropriate indexs to place a relevant application image / demo */}
                   </Fragment>
                 );
               })}
+
+              <span className="block w-1/2 h-[1px] bg-white mt-10"></span>
             </div>
           );
         }
