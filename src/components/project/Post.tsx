@@ -87,11 +87,7 @@ export default function Post({ ...props }) {
                 return (
                   <Fragment key={uuidv4()}>
                     <p
-                      className={
-                        j !== 0 && j !== feature.paras.length - 1
-                          ? "py-5"
-                          : undefined
-                      }
+                      className={`${j !== 0 ? "pt-5" : undefined} font-interL`}
                     >
                       {para}
                     </p>

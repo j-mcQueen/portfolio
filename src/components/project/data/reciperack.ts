@@ -19,10 +19,11 @@ export const reciperack = {
     {
       title: "WEEKLY MEAL PLANS",
       paras: [
-        "In the spirit of staying organised and expediting surprisingly quite time-intensive things like deciding what to have for dinner and when, the weekly meal planning feature was built.",
-        "",
-        "",
-        "",
+        "In the spirit of staying organised and expediting surprisingly quite time-intensive things like deciding what to have for dinner and when, the weekly meal planning feature was born.",
+        "Technically speaking, this feature had quite a few moving parts and getting it built required intricate state management as the basis of a solution that answered important questions: What happens to the recipes added to the planner when a user wants to change the selected day? How do I isolate each day's recipes from each other? How do I ensure that a dinner recipe doesn't accidentally become a lunch recipe when a breakfast recipe is removed?",
+        "Here's an overview of my approach. When the component for a particular day in the planner loads, we make sure that the day's meals start fresh (so we don't accidentally transfer recipes from one day to another), so the internal state of breakfast, lunch, and dinner become empty objects for the active day. Then we check if the menu for the entire week has any previously-set data for that day. If not, then we're starting fresh. If so, then the application updates the relevant pieces of meal category state to tell React what is to be rendered. Here's how that's written in code:",
+        // TODO add in useEffect() code from UserMenu.tsx - also look up Prism for JS syntax highlighting https://dev.to/ehlo_250/how-to-add-syntax-highlighting-to-code-snippets-on-your-website-app-or-blog-2mi2
+        'Wait a minute - how then will the application know if a recipe has been added to dinner, lunch, or breakfast? That is where a little trick I devised comes in. Let\'s say a user has added their Spaghetti Bolognese recipe to dinner on Monday. When the button that corresponds to dinner is clicked, we update the internal meal category state to "dinner". Then, a function is executed that checks what the meal category state value is, and adds a property with a value of 2 to the internal component object containing the chosen recipe. At this point, we have a recipe object with a number property indicating that Spaghetti Bolognese belongs to the dinner slot (the meal slots are represented by an array, so dinner will always be 2), so React "reacts" (I\'ll show myself out...) accordingly and renders the recipe in the correct position. For added clarity, breakfast recipes would have a number property of 0, and lunch recipes wold have a number property of 1. Lo and behold, we can add, update, or delete recipes in a particular day without affecting the position of any others!',
       ],
     },
   ],
