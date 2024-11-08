@@ -33,7 +33,13 @@ export default function Experience() {
 
   return (
     <>
-      <h2 className="text-xl xl:text-2xl font-interB pb-5">EXPERIENCE</h2>
+      <hgroup className="pb-5">
+        <h2 className="text-xl xl:text-2xl font-interB pb-5">EXPERIENCE</h2>
+
+        <p className="text-gray xl:text-lg font-interL leading-snug">
+          As you can see, I have been quite the Jack of all trades...
+        </p>
+      </hgroup>
 
       <div className="flex flex-col xl:flex-row px-3 xl:px-5 items-center xl:items-start justify-center gap-5 pb-10">
         {data.map((item, index) => {

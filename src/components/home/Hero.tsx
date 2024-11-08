@@ -5,30 +5,34 @@ import LinkedIn from "../../assets/media/icons/LinkedIn";
 export default function Hero() {
   return (
     <>
-      <header className="flex flex-col items-center">
-        <hgroup className="max-w-[500px] text-center">
+      <header className="flex flex-col items-center text-center leading-snug pb-7">
+        <hgroup>
           <h1 className="font-interB text-2xl xl:text-3xl">
             JACK DONALD MCQUEEN
           </h1>
 
-          <p className="font-interL text-gray text-center xl:text-left leading-snug py-7 xl:py-10 px-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <p className="font-interL text-gray xl:text-left xl:text-lg pt-7 xl:pt-7 px-2">
+            Hello and welcome! I am a Scottish software engineer based in New
+            York.
           </p>
         </hgroup>
+
+        <span className="bg-orangeDim border border-solid border-orange font-interB tracking-normal mt-4 text-sm px-1">
+          AVAILABLE FOR WORK
+        </span>
       </header>
 
       <div className="flex justify-center gap-7 xl:gap-5">
         <a href="https://github.com/j-mcQueen/" target="_blank">
-          <GitHub className="w-7 h-7 xl:hover:fill-orange xl:transition-colors" />
+          <GitHub className="w-7 h-7 xl:hover:fill-ice xl:transition-colors" />
         </a>
 
         <a href="https://www.linkedin.com/in/jackdmcqueen/" target="_blank">
-          <LinkedIn className="w-7 h-7 xl:hover:fill-orange xl:transition-colors" />
+          <LinkedIn className="w-7 h-7 xl:hover:fill-ice xl:transition-colors" />
         </a>
 
-        <a href="mailto:jdmcqueen@gmail.com">
-          <Email className="w-7 h-7 xl:hover:fill-orange xl:transition-colors" />
+        <a href="mailto:jdmcqueen44@gmail.com">
+          <Email className="w-7 h-7 xl:hover:fill-ice xl:transition-colors" />
         </a>
       </div>
     </>

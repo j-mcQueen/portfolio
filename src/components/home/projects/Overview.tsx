@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { Fragment } from "react/jsx-runtime";
 import { v4 as uuidv4 } from "uuid";
 
@@ -11,8 +10,7 @@ import MDB from "../../../assets/media/icons/tech/MDB";
 import PY from "../../../assets/media/icons/tech/PY";
 
 export default function Overview({ ...props }) {
-  const { title, blurb, tech, setActiveProject } = props;
-  const navigate = useNavigate();
+  const { title, url, blurb, tech } = props;
 
   const toolsClass = "w-5 h-5 xl:w-7 xl:h-7";
   const tools = {
@@ -24,20 +22,11 @@ export default function Overview({ ...props }) {
     PY: <PY className={toolsClass} />,
   };
 
-  const handleOpen = (title: string) => {
-    let sanitized = title;
-    if (title.includes(" ")) sanitized = title.replace(/\W/g, ""); // strip title of everything except letters and numbers
-    const sanitizedL = sanitized.toLowerCase();
-
-    setActiveProject(sanitizedL);
-    return navigate(`/projects/${sanitizedL}`);
-  };
-
   return (
-    <button
+    <a
+      href={url}
       type="button"
-      className="border border-solid border-emerald p-3 xl:hover:border-orange focus:outline-none focus:border-orange transition-colors"
-      onClick={() => handleOpen(title)}
+      className="border border-solid border-ice p-3 xl:hover:border-orange focus:outline-none focus:border-orange transition-colors"
     >
       <div className="flex items-center justify-between">
         <h3 className="font-interB text-lg xl:text-xl">{title}</h3>
@@ -57,6 +46,6 @@ export default function Overview({ ...props }) {
           );
         })}
       </div>
-    </button>
+    </a>
   );
 }
