@@ -1,11 +1,20 @@
 import { Fragment } from "react/jsx-runtime";
 import { v4 as uuidv4 } from "uuid";
+import { motion } from "framer-motion";
 
 export default function Overview({ ...props }) {
   const { title, company, bullets, icons } = props;
 
+  const childVariant = {
+    initial: { opacity: 0, x: -20 },
+    animate: { opacity: 1, x: 0 },
+  };
+
   return (
-    <div className="border border-solid border-ice p-5 xl:max-w-[575px]">
+    <motion.div
+      variants={childVariant}
+      className="border border-solid border-ice p-5 xl:max-w-[575px]"
+    >
       <hgroup className="flex items-center justify-between pb-5">
         <h3 className="font-interB text-left text-lg xl:text-xl">{title}</h3>
 
@@ -44,6 +53,6 @@ export default function Overview({ ...props }) {
           );
         })}
       </ul>
-    </div>
+    </motion.div>
   );
 }

@@ -1,5 +1,6 @@
 import { data } from "./data";
 import { v4 as uuidv4 } from "uuid";
+import { motion } from "framer-motion";
 import Overview from "./Overview";
 import Code from "../../../assets/media/icons/experience/Code";
 import Design from "../../../assets/media/icons/experience/Design";
@@ -31,6 +32,11 @@ export default function Experience() {
     ],
   ];
 
+  const parentVariant = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { staggerChildren: 0.25 } },
+  };
+
   return (
     <>
       <hgroup className="pb-5">
@@ -41,7 +47,12 @@ export default function Experience() {
         </p>
       </hgroup>
 
-      <div className="flex flex-col xl:flex-row px-3 xl:px-5 items-center xl:items-start justify-center gap-5 pb-10">
+      <motion.div
+        initial="initial"
+        animate="animate"
+        variants={parentVariant}
+        className="flex flex-col xl:flex-row px-3 xl:px-5 items-center xl:items-start justify-center gap-5 pb-10"
+      >
         {data.map((item, index) => {
           return (
             <Overview
@@ -53,7 +64,7 @@ export default function Experience() {
             />
           );
         })}
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 import { v4 as uuidv4 } from "uuid";
+import { motion } from "framer-motion";
 
 import Outward from "../../../assets/media/icons/Outward";
 import JS from "../../../assets/media/icons/tech/JS";
@@ -22,8 +23,14 @@ export default function Overview({ ...props }) {
     PY: <PY className={toolsClass} />,
   };
 
+  const childVariant = {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
-    <a
+    <motion.a
+      variants={childVariant}
       href={url}
       type="button"
       className="border border-solid border-ice p-3 xl:hover:border-orange focus:outline-none focus:border-orange transition-colors"
@@ -46,6 +53,6 @@ export default function Overview({ ...props }) {
           );
         })}
       </div>
-    </a>
+    </motion.a>
   );
 }
