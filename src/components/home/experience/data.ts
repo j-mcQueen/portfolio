@@ -1,22 +1,25 @@
 export const data = [
   {
-    title: "FREELANCE SOFTWARE ENGINEER",
+    title: "SOFTWARE ENGINEER",
+    company: "FREELANCE",
     bullets: [
-      "Lead and strategize the technical development of projects, consistently delivering lossless design translation.",
-      "Collaborate with a designer to craft bespoke design prototypes and web applications for small businesses.",
-      "Liaise with clients directly to understand business requirements that informs UX optimization in the design phase.",
+      "Lead end-to-end technical development of bespoke, engagement-oriented web applications for small businesses.",
+      "Engage directly with clients to gather requirements, informing UX design that aligns with business objectives.",
+      "Implemented a cohesive brand identity for an urban EV charging start-up, contributing to the company's growth and credibility.",
     ],
   },
   {
-    title: "CONTRACTOR, OPERATIONS",
+    title: "FINANCE & OPERATIONS MANAGER",
+    company: "MR. BAGUETTE",
     bullets: [
-      "Support financial, marketing, sales, and inventory operations as required by business needs.",
-      "Manage business accounts and reconciliation in Quickbooks to minimize accounting services expenditure.",
-      "Facilitated a product collection discontinuation that led to a recovery of over $150,000 in manufacturing costs and diamonds.",
+      "Support financial, marketing, sales, and inventory initiatives for a wholesale diamond supplier to improve operational efficiency and profitability.",
+      "Manage business account bookkeeping in Quickbooks, reducing external accounting service expenses by 50%.",
+      "Executed a product collection discontinuation, recovering over $150,000 in diamonds and manufacturing costs.",
     ],
   },
   {
     title: "FASHION MODEL",
+    company: "VARIOUS",
     bullets: [
       "Managed a successful modelling career alongside international agencies, working with several prestigious brands across the world.",
       "Collaborated with fashion teams to fulfil projects in the catwalk, commercial, editorial and e-commerce sub-sectors.",

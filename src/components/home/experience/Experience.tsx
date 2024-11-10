@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import Overview from "./Overview";
 import Code from "../../../assets/media/icons/experience/Code";
 import Design from "../../../assets/media/icons/experience/Design";
-import Partner from "../../../assets/media/icons/experience/Partner";
+import Bolt from "../../../assets/media/icons/experience/Bolt";
 import Bank from "../../../assets/media/icons/experience/Bank";
 import Money from "../../../assets/media/icons/experience/Money";
 import Globe from "../../../assets/media/icons/experience/Globe";
@@ -17,7 +17,7 @@ export default function Experience() {
     [
       <Code className={expClass} />,
       <Design className={expClass} />,
-      <Partner className={expClass} />,
+      <Bolt className={expClass} />,
     ],
     [
       <Organise className={expClass} />,
@@ -48,6 +48,7 @@ export default function Experience() {
               key={uuidv4()}
               title={item.title}
               bullets={item.bullets}
+              company={item.company}
               icons={icons[index]}
             />
           );

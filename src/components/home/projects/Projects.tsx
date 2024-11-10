@@ -13,7 +13,7 @@ export default function Projects({ ...props }) {
         </h2>
 
         <p className="font-interL xl:text-lg text-gray leading-snug">
-          The fruits of a labor of love for every software engineer.
+          The fruits of a labor of love for every developer.
         </p>
       </hgroup>
 

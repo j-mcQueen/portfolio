@@ -2,11 +2,15 @@ import { Fragment } from "react/jsx-runtime";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Overview({ ...props }) {
-  const { title, bullets, icons } = props;
+  const { title, company, bullets, icons } = props;
 
   return (
     <div className="border border-solid border-ice p-5 xl:max-w-[575px]">
-      <h3 className="font-interB text-left text-lg xl:text-xl pb-5">{title}</h3>
+      <hgroup className="flex items-center justify-between pb-5">
+        <h3 className="font-interB text-left text-lg xl:text-xl">{title}</h3>
+
+        <p className="text-gray leading-snug text-sm">{company}</p>
+      </hgroup>
 
       <ul>
         {bullets.map((bullet: string, index: number) => {
@@ -15,7 +19,22 @@ export default function Overview({ ...props }) {
               <li className="flex items-center gap-5 font-interL text-left text-sm text-gray leading-snug">
                 {icons[index]}
 
-                {bullet}
+                <span>
+                  {bullet}
+                  {index === bullets.length - 1 &&
+                  title === "SOFTWARE ENGINEER" ? (
+                    <>
+                      &nbsp;
+                      <a
+                        href="https://4sbelectric.co.uk/"
+                        target="_blank"
+                        className="text-orange xl:hover:underline"
+                      >
+                        [view]
+                      </a>
+                    </>
+                  ) : null}
+                </span>
               </li>
 
               {index === 0 || index === 1 ? (
