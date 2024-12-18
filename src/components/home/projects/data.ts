@@ -23,7 +23,7 @@ export const data = [
   {
     title: "MR. BAGUETTE",
     blurb:
-      "The business website for the esteemed wholesale fancy-shaped diamond supplier.",
+      "The business website for the veteran wholesale fancy-shaped diamond supplier.",
     tech: ["JS", "TS", "TW", "RE"],
     url: "https://mrbaguette.com/",
   },

@@ -46,7 +46,7 @@ export default function Overview({ ...props }) {
                 </span>
               </li>
 
-              {index === 0 || index === 1 ? (
+              {index >= 0 && index !== bullets.length - 1 ? (
                 <span className="block py-2">+</span>
               ) : null}
             </Fragment>

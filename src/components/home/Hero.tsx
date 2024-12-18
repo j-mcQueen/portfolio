@@ -11,8 +11,9 @@ export default function Hero() {
             JACK DONALD MCQUEEN
           </h1>
 
-          <p className="font-interL text-gray xl:text-left xl:text-lg pt-7 xl:pt-7 px-2">
-            Hello and welcome! I am a Scottish software engineer based in New
+          <p className="font-interL max-w-[700px] text-gray xl:text-center xl:text-lg pt-7 xl:pt-7 px-2">
+            Hello and welcome! I am a Scottish software engineer, sales
+            development enthusiast, and casual snow/skateboarder based in New
             York.
           </p>
         </hgroup>
